@@ -38,6 +38,7 @@ h1 {
   margin-bottom: 20px;
   color: #333;
   background: linear-gradient(45deg, #74ebd5, #acb6e5);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pulse 2s infinite;
