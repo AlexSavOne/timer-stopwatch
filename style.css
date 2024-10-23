@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f3f4f6;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,34 +9,55 @@ body {
 }
 
 .container {
-  background-color: #ffffff;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 300px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 28px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .display {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #333;
+  background: linear-gradient(45deg, #74ebd5, #acb6e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
 }
 
 .controls button {
-  width: 120px;
-  padding: 10px;
-  margin: 5px;
+  width: 130px;
+  padding: 12px;
+  margin: 8px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
 }
 
 #start-stop {
@@ -46,6 +67,7 @@ h1 {
 
 #start-stop:hover {
   background-color: #218838;
+  transform: translateY(-3px);
 }
 
 #reset {
@@ -55,4 +77,32 @@ h1 {
 
 #reset:hover {
   background-color: #c82333;
+  transform: translateY(-3px);
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
