@@ -61,6 +61,44 @@ h1 {
   box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
 }
 
+.time-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.time-inputs input {
+  width: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 18px;
+}
+
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mode-toggle button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.mode-toggle button.active {
+  background-color: #007bff;
+  color: white;
+}
+
 #start-stop {
   background-color: #28a745;
   color: white;

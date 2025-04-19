@@ -1,0 +1,19 @@
+{
+  "name": "timer-stopwatch",
+  "version": "1.0.0",
+  "description": "## Описание Это тренировочный проект для отработки навыков разработки на HTML, CSS и JavaScript. В проекте реализован простой таймер/секундомер с возможностями старта, паузы и сброса времени. В будущем я планирую улучшить функциональность и дизайн этого проекта.",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
