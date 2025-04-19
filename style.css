@@ -1,80 +1,80 @@
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  background: linear-gradient(to right, #f8e8ee, #e0f7fa);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .container {
   background: linear-gradient(145deg, #ffffff, #f3f4f6);
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 320px;
+  width: 100%;
+  max-width: 340px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
-  font-size: 28px;
-  letter-spacing: 1.2px;
+  color: #444;
+  font-size: 24px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .display {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
-  background: linear-gradient(45deg, #74ebd5, #acb6e5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: pulse 2s infinite;
+  color: #444;
 }
 
 .controls button {
-  width: 130px;
-  padding: 12px;
-  margin: 8px;
+  width: 120px;
+  padding: 10px;
+  margin: 6px;
   border: none;
-  border-radius: 25px;
+  border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 16px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
 }
 
 .controls button:focus {
   outline: none;
-  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
 }
 
 .time-inputs {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .time-inputs input {
-  width: 60px;
+  width: 70px;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
   text-align: center;
   font-size: 18px;
+  background-color: #f9f9f9;
 }
 
 .mode-toggle {
@@ -82,66 +82,57 @@ h1 {
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .mode-toggle button {
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: none;
   border-radius: 20px;
-  background-color: #e0e0e0;
+  background-color: #e6e6e6;
   cursor: pointer;
   font-weight: bold;
+  font-size: 14px;
   transition: background-color 0.3s;
 }
 
 .mode-toggle button.active {
-  background-color: #007bff;
+  background-color: #90caf9;
   color: white;
 }
 
 #start-stop {
-  background-color: #28a745;
+  background-color: #81c784;
   color: white;
 }
 
 #start-stop:hover {
-  background-color: #218838;
-  transform: translateY(-3px);
+  background-color: #66bb6a;
+  transform: translateY(-2px);
 }
 
 #reset {
-  background-color: #dc3545;
+  background-color: #ef9a9a;
   color: white;
 }
 
 #reset:hover {
-  background-color: #c82333;
-  transform: translateY(-3px);
+  background-color: #e57373;
+  transform: translateY(-2px);
 }
 
-/* Анимации */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+/* Адаптивность */
+@media (max-width: 400px) {
+  .controls button {
+    width: 100%;
   }
 
-  50% {
-    transform: scale(1.05);
+  .time-inputs input {
+    width: 60px;
   }
 
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .mode-toggle button {
+    flex: 1;
+    min-width: 100px;
   }
 }
