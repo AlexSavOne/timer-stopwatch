@@ -10,6 +10,21 @@ body {
   box-sizing: border-box;
 }
 
+header h1 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+  opacity: 0.8;
+}
+
 .container {
   background: linear-gradient(145deg, #ffffff, #f3f4f6);
   padding: 30px;
@@ -120,6 +135,7 @@ h1 {
   background-color: #e57373;
   transform: translateY(-2px);
 }
+
 
 /* Адаптивность */
 @media (max-width: 400px) {
