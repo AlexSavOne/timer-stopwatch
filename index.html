@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,31 +10,65 @@
     <div class="container">
       <header>
         <h1>Таймер / Секундомер</h1>
+        <button id="theme-toggle" aria-label="Переключить тему">🌓</button>
       </header>
 
-      <div class="display">00:00:00</div>
+      <div class="display" role="timer" aria-live="off">00:00:00</div>
 
-      <div class="mode-toggle">
-        <button id="mode-stopwatch" class="active">Секундомер</button>
-        <button id="mode-timer">Таймер</button>
+      <div class="mode-toggle" role="tablist">
+        <button
+          id="mode-stopwatch"
+          class="active"
+          role="tab"
+          aria-selected="true"
+        >
+          Секундомер
+        </button>
+        <button id="mode-timer" role="tab" aria-selected="false">Таймер</button>
       </div>
 
       <div class="time-inputs">
-        <input type="number" id="hours" min="0" max="99" placeholder="Ч" />
-        <input type="number" id="minutes" min="0" max="59" placeholder="М" />
-        <input type="number" id="seconds" min="0" max="59" placeholder="С" />
+        <input
+          type="number"
+          id="hours"
+          min="0"
+          max="99"
+          placeholder="Ч"
+          aria-label="Часы"
+        />
+        <input
+          type="number"
+          id="minutes"
+          min="0"
+          max="59"
+          placeholder="М"
+          aria-label="Минуты"
+        />
+        <input
+          type="number"
+          id="seconds"
+          min="0"
+          max="59"
+          placeholder="С"
+          aria-label="Секунды"
+        />
       </div>
 
       <div class="controls">
         <button id="start-stop">Старт</button>
+        <button id="lap" disabled>Lap</button>
         <button id="reset">Сброс</button>
       </div>
+
+      <div class="progress-bar"><div class="progress"></div></div>
+      <ul class="laps" aria-label="Круги"></ul>
+      <audio id="alarm-audio" src="alarm.mp3" preload="auto"></audio>
 
       <footer>
         <p>created by AlexSavOne 2025</p>
       </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
